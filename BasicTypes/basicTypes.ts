@@ -29,3 +29,26 @@ let list2: Array<number> = [1, 2, 3];   // js: var list2 = [1, 2, 3];
 let x: [string, number];        // js: var x;
 // initialize it
 x = ["hello", 10];              // js: x = ["hello", 10];
+
+console.log(x[0].substring(1));
+
+// Enum
+
+enum Color { Red = 1, Green, Blue };  // js: var Color;
+                                      //     (function (Color) {
+                                      //        Color[Color["Red"] = 1] = "Red";
+                                      //        Color[Color["Green"] = 2] = "Green";
+                                      //        Color[Color["Blue"] = 3] = "Blue";
+                                      //     })(Color || (Color = {}));
+
+let c: Color = Color.Green;           // js: var c = Color.Green;
+let colorName: string = Color[2];     // js: var colorName = Color[2];
+console.log(colorName);               // js: console.log(colorName);
+
+// Any
+let notSure: any = 4;                     // js: var notSure = 4;
+notSure = "maybe a string instead";       // js: notSure = "maybe a string instead";
+notSure = false;                          // js: notSure = false;
+let list3: any[] = [1, true, "free"];     // js: var list3 = [1, true, "free"];
+list3[1] = 100;                           // js: list3[1] = 100;
+
